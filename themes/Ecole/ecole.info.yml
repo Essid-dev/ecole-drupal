@@ -1,0 +1,14 @@
+name: Ecole Theme
+description: "Ecole Themplate"
+type: theme
+version: VERSION
+core: 8.x
+package: Custom
+libraries:
+  - ecole/styling
+regions:
+  header: Header
+  menu: Main Menu
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

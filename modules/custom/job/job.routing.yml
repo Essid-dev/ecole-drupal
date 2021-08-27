@@ -1,0 +1,100 @@
+# Job Routing Configuration
+job.render:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\job\Controller\JobController::index'
+  requirements:
+    _permission: 'access content'
+
+job.getJobList:
+  path: '/jobs'
+  defaults:
+    _controller: '\Drupal\job\Controller\JobController::joblist'
+  requirements:
+    _permission: 'access content'
+
+job.details:
+  path: '/job/{id}'
+  defaults:
+    _controller: '\Drupal\job\Controller\JobController::job_detail'
+  requirements:
+    _permission: 'access content'
+
+job.search_form:
+  path: '/job/form/search'
+  defaults:
+    _form: '\Drupal\job\Form\SearchForm'
+    _title: 'SearchForm'
+  requirements:
+    _access: 'TRUE'
+
+job.cand:
+  path: '/job/form/UploadForm'
+  defaults:
+    _form: '\Drupal\job\Form\UploadForm'
+    _title: 'UploadForm'
+  requirements:
+    _access: 'TRUE'
+
+
+job.search_result:
+  path: 'job/result/{data}'
+  defaults:
+    _controller:  '\Drupal\job\Controller\JobController::job_result'
+    _title: 'Search Page'
+  requirements:
+    _permission: 'access content'
+
+#job.search:
+#  path: 'job/search'
+#  defaults:
+#    _controller:  '\Drupal\job\Controller\JobController::search_job'
+#    _title: 'Search Page'
+#  requirements:
+#    _permission: 'access content'
+
+# Candidate Routing Configuration
+job.apply:
+  path: 'job/apply/{id}'
+  defaults:
+    _controller:  '\Drupal\job\Controller\CandidateController::job_apply'
+    _title: 'Candidate'
+  requirements:
+    _permission: 'access content'
+
+job.candidature:
+  path: '/job/form/candidature'
+  defaults:
+    _form: '\Drupal\job\Form\Candidature'
+    _title: 'Candidature'
+  requirements:
+    _access: 'TRUE'
+
+# Admin Job Routing Configuration
+job.admin:
+  path: '/admin/content/job'
+  defaults:
+    _controller: '\Drupal\job\Controller\JobController::admin_jobs'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+job.admin_detail:
+  path: '/admin/content/job/{id}'
+  defaults:
+    _controller: '\Drupal\job\Controller\JobController::admin_job_detail'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+job.upload_form:
+  path: '/job/form/upload'
+  defaults:
+    _form: '\Drupal\job\Form\UploadForm'
+    _title: 'UploadForm'
+  requirements:
+    _access: 'TRUE'
+
+

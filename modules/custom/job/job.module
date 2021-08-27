@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains job.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function job_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the job module.
+    case 'help.page.job':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Job Entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function job_theme($existing, $type, $theme, $path) {
+  return [
+    'jobs' => [
+      'variables' => [
+        'form' => NULL,
+        'data' => NULL,
+        'base hook' => 'form',
+      ],
+      'path' => $path . '/templates',
+    ],
+    'job_detail' => ['variables' => ['data' => NULL]],
+    'job_result' => ['variables' => ['data' => NULL]],
+    'admin_template' => ['variables' => ['admin_variable' => NULL]],
+    'home' => ['variables' => ['data' => NULL]],
+  ];
+
+}
+
+
+

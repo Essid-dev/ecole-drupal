@@ -1,0 +1,61 @@
+
+<section class="packages">
+  <h3 class="title">Bienvenue sur notre site</h3>
+  <p>Nous créons le match parfait entre tes aspirations et tes compétences.
+    Ignition Program t'aide à accéder aux meilleures opportunités parmi 1500 startups.</p>
+  <hr>
+
+</section>
+
+<div class="row">
+  <div class="home_container">
+    <div class="slide"
+         style="background-image: url('https://www.teahub.io/photos/full/88-885387_android-developer-wallpaper-hd.jpg');">
+      <h3>Developer</h3>
+    </div>
+    <div class="slide" style="
+            background-image: url('https://s32519.pcdn.co/wp-content/uploads/2019/08/first-6-months-as-a-developer-at-relex-social-image.jpeg.optimal.jpeg');
+          ">
+      <h3>Coding</h3>
+    </div>
+    <div class="slide" style="
+            background-image: url('https://c0.wallpaperflare.com/preview/428/871/775/school-coding-data-software-development-thumbnail.jpg');
+          ">
+      <h3>Workshop</h3>
+    </div>
+    <div class="slide" style="
+            background-image: url('https://svitla.com/uploads_converted/0/1709-developers2.webp?1552986943');
+          ">
+      <h3>Meeting</h3>
+    </div>
+    <div class="slide" style="
+            background-image: url('https://wallpapercrafter.com/desktop/276255-work-notebook-coffee-and-laptop-hd.jpg');
+          ">
+      <h3>Work Hard</h3>
+    </div>
+  </div>
+</div>
+
+<script>
+  function slidesPlugin(activeSlide = 0) {
+    const slides = document.querySelectorAll(".slide");
+
+    slides[activeSlide].classList.add("active");
+
+    for (const slide of slides) {
+      slide.addEventListener("click", () => {
+        clearActiveClasses();
+        slide.classList.add("active");
+      });
+    }
+
+    function clearActiveClasses() {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+    }
+  }
+
+  slidesPlugin(2);
+
+</script>

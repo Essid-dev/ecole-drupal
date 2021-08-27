@@ -1,0 +1,43 @@
+{{ kint(page) }}
+<html>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"></link>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+<header>
+  {{ page.header }}
+  <h2><a href="/home" style="color: black;font-weight: 600;">TopWork</a></h2>
+  <nav style="justify-content: flex-end;">
+    <li><a style="display: flex; margin-right: -15px;color:black; font-weight: bold" href="/home">Accueil</a></li>
+    <li><a style="display: flex; margin-right: -15px;color:black; font-weight: bold" href="{{ path('job.getJobList')}}">Offres</a></li>
+    <li><a style="display: flex; margin-right: -15px;color:black; font-weight: bold" href="#">Nous contacter</a></li>
+    <li><a style="display: flex; margin-right: -15px;color:black; font-weight: bold" href="#login">Connexion</a></li>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="background-image"></div>
+  <div class="hero-content-area">
+    <h1>La vie est une fête!</h1>
+    <h3>Nous créons le match parfait entre tes aspirations et tes compétences. </h3>
+    <a href="#" class="btn">Nous Contacter</a>
+  </div>
+</section>
+
+<section class="destinations">
+  {{ page.content }}
+</section>
+
+<footer id="login">
+  {{ page.footer }}
+  <p></p>
+  <p></p>
+</footer>
+</body>
+</html>

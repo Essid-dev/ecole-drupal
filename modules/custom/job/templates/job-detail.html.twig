@@ -1,0 +1,30 @@
+{# [module]/templates/job-detail.html.twig #}
+
+<section class="packages">
+  <h3 class="title">Déposez votre CV - Laissez les employeurs vous trouver</h3>
+  <p>Des milliers de CV sont consultés chaque jour par les recruteurs sur Monster. Déposez votre CV pour être directement contacté par votre futur employeur et trouvez le job qui vous convient vraiment.</p>
+  <hr>
+
+</section>
+
+<div id="app">
+  <div class="container container-space">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-fluid" style ="height: 370px;" src="https://res.cloudinary.com/practicaldev/image/fetch/s--qa72YNaF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/me6sbpz893h3a6ip5zsv.jpg" alt="" />
+      </div>
+      <div class="space col-md-6">
+        {% for e in data %}
+        <h1 class="my-4">{{e.name}} - {{e.salaire}} $</h1>
+        <h3 class="my-3">
+        </h3>
+        <h4>Description: </h4>
+        <p>{{e.description}}</p>
+        <h6 class="my-3">Date: {{ e.date }} , {{ e.ville }} </h6>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="{{ path('job.apply', {'id': e.id}) }}" class="apply" data-title="Candidater !"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

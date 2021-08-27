@@ -1,0 +1,11 @@
+entity.job.add_form:
+  route_name: entity.job.add_form
+  title: 'Add Job'
+  appears_on:
+    - entity.job.collection
+
+entity.candidate.add_form:
+  route_name: entity.candidate.add_form
+  title: 'Add Candidate'
+  appears_on:
+    - entity.candidate.collection

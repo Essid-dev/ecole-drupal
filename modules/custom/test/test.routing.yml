@@ -1,0 +1,6 @@
+book.render:
+  path: '/book'
+  defaults:
+    _controller: '\Drupal\test\Controller\ArticleController::demo'
+  requirements:
+    _permission: 'access content'

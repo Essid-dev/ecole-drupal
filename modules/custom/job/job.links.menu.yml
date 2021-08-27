@@ -1,0 +1,29 @@
+
+# Job menu items definition
+entity.job.collection:
+  title: 'Job list'
+  route_name: entity.job.collection
+  description: 'List Job entities'
+  parent: system.admin_structure
+  weight: 100
+
+job.admin.structure.settings:
+  title: 'Job settings'
+  description: 'Configure Job entities'
+  route_name: job.settings
+  parent: system.admin_structure
+
+# Candidate menu items definition
+entity.candidate.collection:
+  title: 'Candidate list'
+  route_name: entity.candidate.collection
+  description: 'List Candidate entities'
+  parent: system.admin_structure
+  weight: 100
+
+candidate.admin.structure.settings:
+  title: 'Candidate settings'
+  description: 'Configure Candidate entities'
+  route_name: candidate.settings
+  parent: system.admin_structure
+
